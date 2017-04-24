@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delacroix Savon</title>
+<meta charset="utf-8" lang="fr">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+    
+    
+    
+ <!--Logo et preheader-->    
+<div class="flex-container">
+    <div class="flex-container">
+        <div class="containerPanier1" ></div>
+        <a class="containerPanier2" href="../index.html">Se connecter</a>
+        <a class="containerPanier2" href="pagePanier.html">Votre Panier : 0</a>
+    </div> 
+    
+    <div class="logo">
+        <a href="../index.html"><img class="logo" src="../img/logo.jpg" alt="logo"></a>
+    </div>
+</div> 
+
+    
+    
+    
+<!--Menu-->
+<div class="flex-container menu">  
+        <a class="itemMenu aMenu" href="pageResultatRecherche.html">Savons</a>
+        <a class="itemMenu aMenu" href="pageResultatRecherche.html">Produits dérivés</a>
+        <a class="itemMenu aMenu" href="pageDetailsTechniques.html">Détails techniques</a>
+        <a class="itemMenu aMenu" href="pageAPropos.html">A propos de nous</a>
+        <input class="itemMenu aMenu inputMenu" placeholder="recherchez un produit" type="text" name="search"/>
+        <input class="itemMenu aMenu boutonMenu" value="ok" type="submit"  onclick="location.href='pageResultatRecherche.html';" />
+</div>    
+
+    
+
+
+        
+    
+    
+    
+    
+<!--Encarts texte--> 
+<div class="flex-container">
+    <!--Titre--> 
+    <div class="flex-container">
+        <p class="titre titreIndex titrePresentation">Le compte rendu technique</p>
+    </div>
+    
+    <div class="flex-container flexTotal">
+            <div class="textPresentation">
+            http://www.flaticon.com/
+            http://www.freepik.com/
+            https://www.axure.com/
+            https://validator.w3.org/#validate_by_upload
+            https://www.flickr.com/
+            https://commons.wikimedia.org/
+            
+            </br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </br></br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>     
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+
+    
+
+    
+    
+<!--Footer-->      
+<div class="flex-container ">
+  <div class="footer">
+       <p class="sousTitreFooter">Savons</p>
+          <p><a class="lienFooter" target="_blank" href=" ">savons corps</a></p>
+          <p><a class="lienFooter" target="_blank" href=" ">savons linge</a></p>
+          <p><a class="lienFooter" target="_blank" href=" ">savons maison</a></p>
+  </div>
+  <div class="footer">
+        <p class="sousTitreFooter">Produits dérivés</p>
+          <p><a class="lienFooter" target="_blank" href=" ">objets déco</a></p>
+          <p><a class="lienFooter" target="_blank" href=" ">huiles</a></p>
+          <p><a class="lienFooter" target="_blank" href=" ">parfums</a></p>
+  </div>
+  <div class="footer">
+        <p class="sousTitreFooter contact">Nous contacter</p>
+        <input class="inputFooter" placeholder="entrez votre courriel" type="text" name="search"/>
+        <input  class="boutonFooter" value="ok" type="submit" />
+  </div>
+</div>
+    
+<!--fin du footer-->
+<div class="flex-container ">
+    <footer class="footer"><p>© 2016 Delacroix Savon - père &amp; filles. <a class="lienFooter" target="_blank" href="pageAPropos.html">Tous droits réservés</a> | <a class="lienFooter" target="_blank" href="pageAPropos.html">Mentions légales</a> | <a class="lienFooter" target="_blank" href="pageAPropos.html">Conditions générales de vente</a></p></footer>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!--code javascript pour le slider-->   
+
+<script>
+  var slideIndice = 1;
+  
+  affiche(slideIndice);
+
+  function affichePositionModif(n) {
+    affiche(slideIndice += n);
+  }
+
+  function affichePositionCourant(n) {
+    affiche(slideIndice = n);
+  }
+
+  function affiche(n) {
+    var i;
+    
+    var x = document.getElementsByClassName("slideImg");
+    
+    
+    if (n > x.length) {
+    	slideIndice = 1;
+    }    
+    
+    if (n < 1) {
+    	slideIndice = x.length;
+    }
+    
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    
+    x[slideIndice-1].style.display = "block";  
+  }
+</script>
+
+ 
+    
+</body>
+</html>

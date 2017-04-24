@@ -45,10 +45,12 @@ body{
     .reassurance { flex: 1 0px; }
     .footer { flex: 1 0px; }
     
+    
     .containerPanier1 { flex:4 0px;}
     .containerPanier2 { flex: 1 0px;}
     
     .colonne { flex: 1 0px; }
+    .colProduit { flex: 1 0px; }
     
     .itemPanier { flex:1 0px; }
     .col1 { flex: 2 0px; }
@@ -326,17 +328,21 @@ div.gallerie img {
 div.descriptionProduit{
     padding: 10px;
     text-align: center;
+    text-decoration: none;
+    color: darkslategray;
 }
 
 div.prixProduit {
     padding: 10px 0 0 0 ;
     text-align: center;
     color: darkslategrey;
-    font-size: 20px
+    font-size: 20px;
+    text-decoration: none;
 }
 
-
-
+.sousLigne{
+    text-decoration: none;
+}
 
 /***********************************************************Colonne produit********************************************************/
 .main {
@@ -480,7 +486,47 @@ div.prixProduit {
     padding-right: 10px;
 }
 
+/*******************************************************************texte********************************************************************/
+.textPresentation{
+     text-align: justify; 
+     margin-bottom: 50px;
+     font-weight: lighter
+}
 
+.textTemoin{
+     text-align: justify; 
+     margin-bottom: 10px;
+     font-weight: lighter;
+     color:darkcyan;
+}
+
+.titreTemoignage{
+    background-color: whitesmoke;
+    text-align: left;
+    margin: 0 0 5px 0;
+    color: darkcyan;
+}
+
+.textProduitSavon{
+    margin: 0 15px;
+}
+
+.aText{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: darkcyan;
+    margin: 5px;
+    padding:8px;
+}
+.aText:hover{ 
+    background-color: white;
+    color: darkcyan;
+    border: 1px solid darkcyan;
+}
+.panierProduit{
+    padding: 20px;
+
+}
 
 /*******************************************************************Footer********************************************************************/
 .inputFooter, .boutonFooter, .sousTitreFooter {
