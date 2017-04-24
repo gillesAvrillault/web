@@ -1,0 +1,510 @@
+/*.flex-container{
+    border: 1px solid red;
+}*/
+
+body{
+    margin: 0 10%;
+    padding: 0;
+    font-family: "helvetica", 'arial', 'sans-serif';
+}
+
+
+
+/*********************************************************Structure du html**********************************************/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    
+    font-weight: bold;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 0;
+    flex: 1 100%;
+}
+
+
+
+/*********************************************************Responsivité**********************************************/
+@media all and (min-width: 200px) {
+    .reassuranceEnfant { flex: 1 0px;}
+}
+
+@media all and (min-width: 600px) {
+    .slider { flex: 1 auto;}
+    .logo { flex: 1 auto;}
+}
+
+
+
+@media all and (min-width: 800px) {
+    .itemMenu { flex:1 0px; }
+    .main    { flex: 1 0px; }
+    .categorie { flex: 1 0px; }
+    .reassurance { flex: 1 0px; }
+    .footer { flex: 1 0px; }
+    
+    .containerPanier1 { flex:4 0px;}
+    .containerPanier2 { flex: 1 0px;}
+    
+    .colonne { flex: 1 0px; }
+    
+    .itemPanier { flex:1 0px; }
+    .col1 { flex: 2 0px; }
+    .col2 { flex: 4 0px; }
+
+    
+    .boutonRecherche{ flex:1 0px; }
+    .inputRecherche{ flex:5 0px; }
+    
+    .total { flex:1 0px; }
+    .total1 { flex:4 0px; }
+    
+    .logo { order: 1; }
+    .itemMenu { order: 2; }
+    .aside1 { order: 3; } 
+    .main    { order: 4; }
+    .aside2 { order: 5; }
+    .footer  { order: 6; }
+}
+    
+/*********************************************************Bouton panier et connexion**********************************************/
+.containerPanier2{
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.containerPanier2 {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.containerPanier2:hover{
+    background-color: darkgray;
+}
+
+
+/***********************************************************Logo********************************************************/
+.logo{
+    padding: 0;
+    width: 30%;
+    height: auto;
+}
+
+
+
+
+
+
+
+/***********************************************************Menu********************************************************/
+
+.aMenu{
+    color: black;
+    text-decoration: none;
+}
+
+.itemMenu {
+    background-color: whitesmoke;
+    border-top: 1px solid grey; 
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.itemMenu:hover{
+    background-color: darkgray;
+}
+
+.menu{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+/***********************************************************Menu Vertical********************************************************/
+.menuVertical{
+        margin: 10px 0;
+}
+
+.elementMenuVertical{
+    color: black;
+    text-decoration: none;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.aMenuVertical{
+        text-decoration: none;
+}
+
+.elementMenuVertical:hover{
+    background-color: darkgray;
+}
+
+
+
+
+
+
+/*********************************************************barre de Recherche en page index**********************************************/
+.boutonMenu{
+    border-left: none;
+    border-right: none;
+    background-color:darkcyan;
+    color:white;
+    width: 10px;
+    padding: 10px 0;
+}
+
+.boutonMenu:hover{
+    border-left: none;
+    border-right: none;
+    cursor:pointer;
+}
+
+.inputMenu{
+    border-left: none;
+    border-right: none;
+    background-color: whitesmoke;
+    
+}
+
+.inputMenu:hover{
+    background-color:white;    
+}
+
+
+/*********************************************************barre de Recherche en page de résultat**********************************************/
+.recherche{
+    margin-bottom: 30px;
+}
+
+[class*="Recherche"]{    
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+
+.boutonRecherche{
+    border-left: none;
+    border-right: 1px solid black;
+    background-color:darkcyan;
+    color:white;
+    padding: 10px 0;
+    
+    
+}
+
+
+
+
+.boutonRecherche:hover{
+    cursor:pointer;
+}
+
+.inputRecherche{
+    border-left: 1px solid black;
+    border-right: none;
+        background-color:whitesmoke;  
+}
+
+.inputRecherche:hover{
+    background-color:white;    
+}
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************Slider********************************************************/
+
+
+.slideImg {
+  display:none;
+  width:100%;
+  height:300px;
+}
+
+
+.boutonGauche{
+    position:absolute;
+    top:90%;
+    left:0%;
+    margin-left:10%;
+}
+
+.boutonGauche, .boutonDroite{
+        border:none;
+        padding:8px 16px;
+        background-color:darkgray 10%;
+        text-align:center;
+        cursor:pointer;
+        opacity: 0.8;
+    }
+    
+.boutonDroite{
+        position:absolute;
+        top:90%;
+        right:0%;
+        margin-right:10%;
+}
+
+
+
+/***********************************************************Logo********************************************************/
+.texteDuJour{
+    padding: 0;
+    color: darkslategrey;
+    font-size: 18px;
+    text-align: left;
+}
+
+    
+
+/***********************************************************Titre********************************************************/
+.titre{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+.titreResultat{
+        text-align: left;
+}
+
+.titreIndex{
+    color: white;
+    background-color: darkcyan;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+/***********************************************************colonne pub********************************************************/
+.pub{
+    margin-bottom: 10px;
+}
+
+.pub1{
+    background-color: #E6E6FA;
+    color: grey;
+}
+
+.pub2{
+    background-color: #B57EDC;
+    color: white;
+}
+
+
+/***********************************************************images produits********************************************************/
+
+div.gallerie {
+    border: 1px solid #ccc;
+}
+
+div.gallerie:hover {
+    border: 1px solid #777;
+}
+
+div.gallerie img {
+    width: 100%;
+    height: auto;
+}
+
+
+div.descriptionProduit{
+    padding: 10px;
+    text-align: center;
+}
+
+div.prixProduit {
+    padding: 10px 0 0 0 ;
+    text-align: center;
+    color: darkslategrey;
+    font-size: 20px
+}
+
+
+
+
+/***********************************************************Colonne produit********************************************************/
+.main {
+    text-align: justify;  
+    padding:10px;
+}
+
+.main1{
+    padding-top: 0;
+}
+
+
+
+    
+
+
+
+
+/***********************************************************Catégorie de produits********************************************************/
+.categorie{
+    margin: 20px;
+}
+
+/*******************************************************************Panier********************************************************************/
+.titrePanier{
+    text-align: left;
+
+}
+
+.lignePanier1{
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    background-color: whitesmoke;
+    padding:10px;
+}
+
+.lignePanier2{
+    border-bottom: 1px solid grey;
+    height: 100px;
+}
+
+
+.lignePanierImg{
+    width: 100px;
+}
+
+
+.lignePanierDescription, .lignePanierPrix{
+    color: darkslategray;
+    margin-top: 50px;
+}
+
+.lignePanierX{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 50px 75px  100px  75px;
+        font-size: 25px;
+    color: darkcyan;
+}
+
+.lignePanierProduit{
+    margin-top: 25px;
+    padding-bottom: 25px;
+}
+
+.total{
+    padding: 10px;
+    border: none;
+    margin:30px 0 40px 0;
+    text-transform: uppercase;
+}
+
+.total2:hover{
+    background-color: whitesmoke;
+    color: darkcyan;
+    border: 1px solid grey;
+}
+
+/****************************************************Element de réassurances***********************************************************/
+.reassurance {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    background: white;
+    align-content: center;
+    align-items: center;
+}
+
+.reassuranceEnfant{
+        text-decoration: none;
+        color:darkcyan;
+}
+
+.reassuranceP{
+        padding: 10px;
+}
+
+.reassurance:hover{
+    background-color: whitesmoke;
+}
+
+.logoReassurance{
+    float: left;
+    width:40px;
+    margin: 16px;
+}
+
+/****************************************************Bouton ajout panier***********************************************************/
+.ajoutPanier {
+    align-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    color: white;
+    font-size: 20px;
+   text-decoration: none;
+           cursor:pointer;
+}
+
+.logoAjoutPanier{
+    width:40px;
+    margin: 16px;
+        float: left;
+}
+
+.logoAjoutPanierResultat{
+    width: 25px;
+}
+
+.texteAjoutPanierResultat{
+    font-size: 14px;
+}
+
+.ajoutPanierEnfant{
+   text-decoration: none;
+    color: white;
+}
+
+.texteAjoutPanier{
+    padding-right: 10px;
+}
+
+
+
+/*******************************************************************Footer********************************************************************/
+.inputFooter, .boutonFooter, .sousTitreFooter {
+    margin: 10px 0;
+}
+
+.sousTitreFooter {
+    text-transform: uppercase;
+}
+
+
+
+.footer{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 3px;
+    background: white;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+
+[class*="lienFooter"]{
+    font-weight: lighter;
+    color: gray;
+    text-decoration: none;
+}
