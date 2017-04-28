@@ -1,3 +1,4 @@
+/*Décommenter pour observer la structure des flex-contenaire*/ 
 /*.flex-container{
     border: 1px solid red;
 }*/
@@ -24,51 +25,44 @@ body{
     flex: 1 100%;
 }
 
-
-
 /*********************************************************Responsivité**********************************************/
+
+/*css appliqué au dessus de 200px*/ 
 @media all and (min-width: 200px) {
     .reassuranceEnfant { flex: 1 0px;}
+        .slider, .logo { flex: 1 auto;}
 }
 
-@media all and (min-width: 600px) {
-    .slider { flex: 1 auto;}
-    .logo { flex: 1 auto;}
-}
-
-
-
+/*css appliqué au dessus de 800px*/ 
 @media all and (min-width: 800px) {
-    .itemMenu { flex:1 0px; }
-    .main    { flex: 1 0px; }
-    .categorie { flex: 1 0px; }
-    .reassurance { flex: 1 0px; }
-    .footer { flex: 1 0px; }
+    
+    /*dimensionnement des elements*/
+    .itemMenu, .main, .categorie, .reassurance, .footer, .containerPanier2, .boutonRecherche, .colonne, .colProduit, .itemPanier, .total, .reassuranceEnfant
+        { flex: 1 0px;}
+    
+    .col1 
+        { flex: 2 0px; }
+    
+    .containerPanier1, .col2, .total1 
+        { flex:4 0px;}
+     
+    .inputRecherche
+        { flex:5 0px; }
     
     
-    .containerPanier1 { flex:4 0px;}
-    .containerPanier2 { flex: 1 0px;}
-    
-    .colonne { flex: 1 0px; }
-    .colProduit { flex: 1 0px; }
-    
-    .itemPanier { flex:1 0px; }
-    .col1 { flex: 2 0px; }
-    .col2 { flex: 4 0px; }
-
-    
-    .boutonRecherche{ flex:1 0px; }
-    .inputRecherche{ flex:5 0px; }
-    
-    .total { flex:1 0px; }
-    .total1 { flex:4 0px; }
-    
+    /*ordre de rangement de certains element*/
     .logo { order: 1; }
     .itemMenu { order: 2; }
     .aside1 { order: 3; } 
     .main    { order: 4; }
     .aside2 { order: 5; }
     .footer  { order: 6; }
+    
+    
+    /*le panier reste en une ligne au dessus de 800px*/ 
+    .nowrap  { 
+      flex-wrap: nowrap;
+    }
 }
     
 /*********************************************************Bouton panier et connexion**********************************************/
@@ -88,16 +82,12 @@ body{
 
 
 /***********************************************************Logo********************************************************/
+
 .logo{
     padding: 0;
     width: 30%;
     height: auto;
 }
-
-
-
-
-
 
 
 /***********************************************************Menu********************************************************/
@@ -400,8 +390,10 @@ div.prixProduit {
     cursor: pointer;
     border: none;
     border-bottom: 1px solid grey;
+    
     padding: 50px 75px  100px  75px;
-        font-size: 25px;
+    
+    font-size: 25px;
     color: darkcyan;
 }
 
@@ -451,6 +443,16 @@ div.prixProduit {
     width:40px;
     margin: 16px;
 }
+
+.logoPers{width: 80px;    margin: 16px;    float: left;}
+
+.logoPers2{width: 80px;    margin: 16px;    float: right;}
+
+.txtPers2{
+    float: right;text-align: right;                margin-bottom: 50px;
+     font-weight: lighter;
+}
+
 
 /****************************************************Bouton ajout panier***********************************************************/
 .ajoutPanier {
@@ -528,6 +530,11 @@ div.prixProduit {
 
 }
 
+
+.lienDT{
+    text-decoration: none;
+    color:darkcyan;
+}
 /*******************************************************************Footer********************************************************************/
 .inputFooter, .boutonFooter, .sousTitreFooter {
     margin: 10px 0;

@@ -351,15 +351,15 @@
 <div class="flex-container ">
   <div class="footer">
        <p class="sousTitreFooter">Savons</p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons corps</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons linge</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons maison</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">savons corps</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">savons linge</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">savons maison</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter">Produits dérivés</p>
-          <p><a class="lienFooter" target="_blank" href=" ">objets déco</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">huiles</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">parfums</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">objets déco</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">huiles</a></p>
+          <p><a class="lienFooter" href="html/pageResultatRecherche.html">parfums</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter contact">Nous contacter</p>
@@ -387,36 +387,31 @@
 <!--code javascript pour le slider-->   
 
 <script>
+  /*A l'etat initial on affiche l'element du slider à la position 1.*/
   var slideIndice = 1;
-  
   affiche(slideIndice);
 
-  function affichePositionModif(n) {
-    affiche(slideIndice += n);
-  }
+  /*Au clic sur la fleche de gauche du slider, on affiche l'element du slider à la position n-1 et n+1 si fleche de droite.*/
+  function affichePositionModif(n) {affiche(slideIndice += n);}
 
-  function affichePositionCourant(n) {
-    affiche(slideIndice = n);
-  }
-
+  /*on affiche la position n.*/
+  function affichePositionCourant(n) {affiche(slideIndice = n);}
+  
   function affiche(n) {
     var i;
-    
+    /*initialisation d'un tableau x composer de tous les elements ayant la classe slideImg*/ 
     var x = document.getElementsByClassName("slideImg");
     
+    /*si n est plus grand que la taille du tableau slideIndice est reninitialisé à 1. Quand on a fait le tour des images du slider vers la gauche.*/
+    if (n > x.length) {slideIndice = 1;}    
     
-    if (n > x.length) {
-    	slideIndice = 1;
-    }    
+    /*si n est plus petit que 1, slideIndice est reninitialisé à la taille du tableau. Quand on a fait le tour des images du slider mais vers la droite.*/ 
+    if (n < 1) {slideIndice = x.length;}
     
-    if (n < 1) {
-    	slideIndice = x.length;
-    }
+    /*on cache les images qui sont toutes affichée à l'état initial*/
+    for (i = 0; i < x.length; i++) {x[i].style.display = "none";}
     
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    
+    /*on affiche l'image à l'indice voulu.*/
     x[slideIndice-1].style.display = "block";  
   }
 </script>

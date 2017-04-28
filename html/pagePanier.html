@@ -46,7 +46,7 @@
     
     
  <!--bloc panier-->   
-<div class="flex-container">
+<div class="flex-container nowrap">
     <div class="itemPanier col1"> 
         <div class="lignePanier1">Produits</div> 
         <div class="lignePanier2 lignePanierProduit">
@@ -65,14 +65,12 @@
     </div>
     
     <div class="itemPanier">  
-        <div class="lignePanier1">Quantité</div> 
-        <div class="lignePanier2 lignePanierPrix">2</div> 
+        <div class="lignePanier1">Quantité</div>
+        <div class="lignePanier2 lignePanierPrix">
+            <input class="ligneQuantite" type="number" name="note" step="1" min="0" max="100"/>
+        </div>
     </div>
     
-    <div class="itemPanier">  
-            <div class="lignePanier1">Ajouter</div> 
-            <input class="lignePanier2 lignePanierX" value="+" type="submit" /> 
-    </div>
     
     <div class="itemPanier">  
         <div class="lignePanier1">Sous-Total</div> 
@@ -90,28 +88,32 @@
 <div class="flex-container flexTotal">
         <div class="total total1">Total produits : 35 € 78</div>
         <input class="total aMenu boutonMenu total2" value="commander" type="submit" />
+</div>
+<div class="flex-container flexTotal">
+        <input class="total aMenu boutonMenu total2" value="continuer mes achats" type="submit" onclick="location.href='../html/pageResultatRecherche.html';"/>
 </div> 
         
  <!--Elements de Reassurances-->   
   
 <div class="flex-container ">
   <div class="reassurance">
-        <a class="reassuranceEnfant" target="_blank" href="index.html"><img class="logoReassurance" src="../img/rea2.png" alt="savon">
+     <a class="reassuranceEnfant" target="_blank" href="../index.html"><img class="logoReassurance" src="../img/rea2.png" alt="savon">
         <p class="reassuranceEnfant reassuranceP" >Livraison rapide en 24h ou 48h</p></a>
+
   </div>  
     
   <div class="reassurance">
-        <a class="reassuranceEnfant" target="_blank" href="index.html"><img class="logoReassurance" src="../img/rea1.png" alt="savon">
+        <a class="reassuranceEnfant" target="_blank" href="../index.html"><img class="logoReassurance" src="../img/rea1.png" alt="savon">
         <p class="reassuranceEnfant reassuranceP" >Service après vente gratuit</p></a>
   </div>  
     
   <div class="reassurance">
-        <a class="reassuranceEnfant" target="_blank" href="index.html"><img class="logoReassurance" src="../img/rea3.png" alt="savon">
+        <a class="reassuranceEnfant" target="_blank" href="../index.html"><img class="logoReassurance" src="../img/rea3.png" alt="savon">
         <p class="reassuranceEnfant reassuranceP" >Satisfait ou remboursé</p></a>
   </div>  
     
   <div class="reassurance">
-        <a class="reassuranceEnfant" target="_blank" href="index.html"><img class="logoReassurance" src="../img/rea4.png" alt="savon">
+        <a class="reassuranceEnfant" target="_blank" href="../index.html"><img class="logoReassurance" src="../img/rea4.png" alt="savon">
         <p class="reassuranceEnfant reassuranceP" >Paiement sécurisé</p></a>
   </div>
 </div>
@@ -219,15 +221,15 @@
 <div class="flex-container ">
   <div class="footer">
        <p class="sousTitreFooter">Savons</p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons corps</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons linge</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons maison</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">savons corps</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">savons linge</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">savons maison</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter">Produits dérivés</p>
-          <p><a class="lienFooter" target="_blank" href=" ">objets déco</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">huiles</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">parfums</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">objets déco</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">huiles</a></p>
+          <p><a class="lienFooter"  href="pageResultatRecherche.html">parfums</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter contact">Nous contacter</p>

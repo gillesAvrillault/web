@@ -38,16 +38,19 @@
 
 
 <div class="flex-container">
-    <div class="colProduit gallerie"><img class="colProduitImg" src="../img/img2.jpg" alt="produit 2">
+    <div class="colProduit gallerie">
+        <img class="colProduitImg" src="../img/img2.jpg" alt="produit 2.1">
+        <img class="colProduitImg" src="../img/img22.jpg" alt="produit 2.2">
+        <img class="colProduitImg" src="../img/img222.jpg" alt="produit 2.3">
         <div class="flex-container">
             <div class="colProduit gallerie">
-                <img class="colProduitImg" src="../img/img2.jpg" alt="produit 2">
+                <img  src="../img/img2.jpg" alt="produit 2.1" onclick="affiche(1)">
             </div>
             <div class="colProduit gallerie">
-                <img class="colProduitImg" src="../img/img22.jpg" alt="produit 2">
+                <img  src="../img/img22.jpg" alt="produit 2.2" onclick="affiche(2)">
             </div>
             <div class="colProduit gallerie">
-                <img class="colProduitImg" src="../img/img222.jpg" alt="produit 2">
+                <img  src="../img/img222.jpg" alt="produit 2.3" onclick="affiche(3)">
             </div>
         </div>
     </div>
@@ -193,15 +196,15 @@
 <div class="flex-container ">
   <div class="footer">
        <p class="sousTitreFooter">Savons</p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons corps</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons linge</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">savons maison</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">savons corps</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">savons linge</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">savons maison</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter">Produits dérivés</p>
-          <p><a class="lienFooter" target="_blank" href=" ">objets déco</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">huiles</a></p>
-          <p><a class="lienFooter" target="_blank" href=" ">parfums</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">objets déco</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">huiles</a></p>
+          <p><a class="lienFooter" href="pageResultatRecherche.html">parfums</a></p>
   </div>
   <div class="footer">
         <p class="sousTitreFooter contact">Nous contacter</p>
@@ -227,39 +230,23 @@
     
     
 <!--code javascript pour le slider-->   
-
+<!--L'indice du -->
 <script>
+      /*A l'etat initial on affiche l'element du slider à la position 1.*/
   var slideIndice = 1;
-  
   affiche(slideIndice);
-
-  function affichePositionModif(n) {
-    affiche(slideIndice += n);
-  }
-
-  function affichePositionCourant(n) {
-    affiche(slideIndice = n);
-  }
 
   function affiche(n) {
     var i;
     
-    var x = document.getElementsByClassName("slideImg");
+    /*initialisation d'un tableau x composer de tous les elements ayant la classe colProduitImg*/ 
+    var x = document.getElementsByClassName("colProduitImg");
+
+    /*on cache les images qui sont toutes affichée à l'état initial*/
+    for (i = 0; i < x.length; i++) {x[i].style.display = "none";}
     
-    
-    if (n > x.length) {
-    	slideIndice = 1;
-    }    
-    
-    if (n < 1) {
-    	slideIndice = x.length;
-    }
-    
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    
-    x[slideIndice-1].style.display = "block";  
+    /*on affiche l'image à l'indice voulu. sachant que n est donnée par le clic sur l'image.*/
+    x[n-1].style.display = "block";  
   }
 </script>
 
